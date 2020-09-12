@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.apache.commons.lang.ObjectUtils;
 import org.springframework.context.annotation.Primary;
 import tr.com.merciyes.commons.entity.ResourceEntity;
 import tr.com.merciyes.persistance.constants.PersistenceConstants;
@@ -37,5 +38,18 @@ public class EventEntity extends ResourceEntity {
     private String duration;
 
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        EventEntity that = (EventEntity) obj;
 
+        return ObjectUtils.equals(that.getResourceId(), this.getResourceId())
+                && ObjectUtils.equals(that.getClub(), this.getClub())
+                && ObjectUtils.equals(that.getEventTitle(), this.getEventTitle());
+    }
 }

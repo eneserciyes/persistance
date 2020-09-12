@@ -5,7 +5,6 @@ import tr.com.merciyes.commons.model.Event;
 
 import java.util.List;
 
-@Service
 public interface EventService {
     public List<Event> getEvents();
 }
