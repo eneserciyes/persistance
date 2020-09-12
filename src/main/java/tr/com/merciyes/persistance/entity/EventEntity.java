@@ -5,14 +5,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.apache.commons.lang.ObjectUtils;
-import org.springframework.context.annotation.Primary;
 import tr.com.merciyes.commons.entity.ResourceEntity;
 import tr.com.merciyes.persistance.constants.PersistenceConstants;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = PersistenceConstants.Entity.EVENTS_APPROVED)
@@ -32,7 +30,7 @@ public class EventEntity extends ResourceEntity {
     private String description;
 
     @Column(name = PersistenceConstants.COLS.DATE)
-    private LocalDateTime date;
+    private String date;
 
     @Column(name = PersistenceConstants.COLS.DURATION)
     private String duration;
