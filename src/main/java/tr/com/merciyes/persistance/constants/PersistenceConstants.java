@@ -19,8 +19,8 @@ public class PersistenceConstants {
         public static final String CLUB = "club";
         public static final String EVENT_TITLE = "eventTitle";
         public static final String DESCRIPTION = "description";
-        public static final String DATE = "date";
-        public static final String DURATION = "duration";
+        public static final String START = "start";
+        public static final String END = "end";
         public static final String CATEGORY = "category";
     }
 }

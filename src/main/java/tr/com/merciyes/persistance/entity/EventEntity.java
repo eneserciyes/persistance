@@ -29,11 +29,11 @@ public class EventEntity extends ResourceEntity {
     @Column(name = PersistenceConstants.COLS.DESCRIPTION)
     private String description;
 
-    @Column(name = PersistenceConstants.COLS.DATE)
-    private String date;
+    @Column(name = PersistenceConstants.COLS.START)
+    private String start;
 
-    @Column(name = PersistenceConstants.COLS.DURATION)
-    private String duration;
+    @Column(name = PersistenceConstants.COLS.END)
+    private String end;
 
 
     @Override
